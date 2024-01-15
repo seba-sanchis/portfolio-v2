@@ -2,29 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: false;
+}
+
 :root {
   --page-background: #fff;
-  --text-color: oklch(19.37% 0.006 300.98);
-  --nav-border: oklch(97.12% 0.002 325.59);
-  --nav-color: oklch(54.84% 0.023 304.99);
-  --nav-color-hover: oklch(19.37% 0.006 300.98);
+
+  --full-contrast: #000;
+  --primary-contrast: oklch(19.37% 0.006 300.98);
+  --tertiary-contrast: oklch(36.98% 0.014 302.71);
+  --quaternary-contrast: oklch(54.84% 0.023 304.99);
+  --senary-contrast: oklch(91.75% 0.004 301.42);
+  --septenary-contrast: oklch(97.12% 0.002 325.59);
+
+  --light-pink: color-mix(in srgb, var(--vivid-pink) 10%, white 80%);
+  --bright-blue: oklch(51.01% 0.274 263.83);
+  --indigo-blue: oklch(51.64% 0.229 281.65);
+  --electric-violet: oklch(53.18% 0.28 296.97);
+  --french-violet: oklch(47.66% 0.246 305.88);
+  --vivid-pink: oklch(69.02% 0.277 332.77);
+  --hot-pink: oklch(59.91% 0.239 8.14);
+  --hot-red: oklch(61.42% 0.238 15.34);
+  --orange-red: oklch(63.32% 0.24 31.68);
+  --subtle-purple: color-mix(in srgb, var(--bright-blue) 5%, #fff 10%);
+
+  --page-bg-radial-gradient: radial-gradient(circle, white 0%, white 100%);
+  --soft-pink-radial-gradient: radial-gradient(
+    circle at center bottom,
+    color-mix(in srgb, oklch(69.02% 0.277 332.77) 10%, white 80%) 0%,
+    white 80%
+  );
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --page-background: oklch(16.93% .004 285.95);
-    --text-color: oklch(98.81% 0 0);
-    --nav-border: oklch(25.16% 0.008 308.11);
-    --nav-color: oklch(70.9% 0.015 304.04);
-    --nav-color-hover: oklch(98.81% 0 0);
+    --page-background: oklch(16.93% 0.004 285.95);
+
+    --full-contrast: #fff;
+    --primary-contrast: oklch(98.81% 0 0);
+    --tertiary-contrast: oklch(84.01% 0.009 308.34);
+    --quaternary-contrast: oklch(70.9% 0.015 304.04);
+    --senary-contrast: oklch(36.98% 0.014 302.71);
+    --septenary-contrast: oklch(25.16% 0.008 308.11);
+
+    --light-pink: color-mix(in srgb, var(--vivid-pink) 10%, white 80%);
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    --indigo-blue: oklch(51.64% 0.229 281.65);
+    --electric-violet: oklch(53.18% 0.28 296.97);
+    --french-violet: oklch(47.66% 0.246 305.88);
+    --vivid-pink: oklch(69.02% 0.277 332.77);
+    --hot-pink: oklch(59.91% 0.239 8.14);
+    --hot-red: oklch(61.42% 0.238 15.34);
+    --orange-red: oklch(63.32% 0.24 31.68);
+    --subtle-purple: color-mix(in srgb, var(--bright-blue) 5%, #fff 10%);
+
+    --page-bg-radial-gradient: radial-gradient(circle, black 0%, black 100%);
+    --soft-pink-radial-gradient: radial-gradient(
+      circle at center bottom,
+      color-mix(
+          in srgb,
+          color-mix(in srgb, oklch(69.02% 0.277 332.77), white 70%) 5%,
+          oklch(16.93% 0.004 285.95) 75%
+        )
+        0%,
+      color-mix(in srgb, black, transparent 15%) 80%
+    );
   }
 }
 
 body {
-  color: var(--text-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--primary-contrast);
   background: var(--page-background);
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100svh;
+}
+
+.section {
+  @apply flex justify-center p-12;
+}
+
+.input {
+  @apply p-2 outline-none rounded border border-[--tertiary-contrast] text-[--tertiary-contrast] bg-[--page-background];
+}
+
+.pill {
+  @apply [&:nth-child(6n+1)]:[--pill-accent:--hot-red] [&:nth-child(6n+2)]:[--pill-accent:--hot-pink] [&:nth-child(6n+3)]:[--pill-accent:--electric-violet] [&:nth-child(6n+4)]:[--pill-accent:--french-violet] [&:nth-child(6n+5)]:[--pill-accent:--indigo-blue] [&:nth-child(6n+6)]:[--pill-accent:--bright-blue];
 }
