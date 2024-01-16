@@ -10,7 +10,7 @@ export default function Page() {
         <div className="flex justify-between p-6 rounded-lg bg-[--septenary-contrast]">
           <h1 className="text-4xl font-semibold">Education</h1>
           <Image
-            src="/assets/graduation-cap-solid.svg"
+            src="/assets/svg/graduation-cap-solid.svg"
             alt="briefcase icon"
             width={48}
             height={48}

@@ -43,8 +43,8 @@ export const aboutMe = {
   description:
     "Hey, I'm Sebastian Sanchis 👋, bringing over 3 years of experience in building responsive, user-friendly websites and applications. I specialize in delivering seamless user experiences through the latest technologies and clean, maintainable code.",
   photo: {
-    dark: "/assets/about_me-black.jpg",
-    light: "/assets/about_me-white.jpg",
+    dark: "/assets/images/about_me_dark.jpg",
+    light: "/assets/images/about_me_light.jpg",
   },
 };
 
@@ -69,8 +69,8 @@ export const education = [
     date: "2022",
     description: "Short description",
     image: {
-      dark: "/assets/education_digital-house_white.png",
-      light: "/assets/education_digital-house_black.png",
+      dark: "/assets/images/education_digital-house_dark.jpg",
+      light: "/assets/images/education_digital-house_light.jpg",
     },
   },
   {
@@ -79,8 +79,8 @@ export const education = [
     date: "2022",
     description: "Short description",
     image: {
-      dark: "/assets/education_digital-house_white.png",
-      light: "/assets/education_digital-house_black.png",
+      dark: "/assets/images/education_digital-house_dark.jpg",
+      light: "/assets/images/education_digital-house_light.jpg",
     },
   },
   {
@@ -89,8 +89,8 @@ export const education = [
     date: "2022",
     description: "Short description",
     image: {
-      dark: "/assets/education_digital-house_white.png",
-      light: "/assets/education_digital-house_black.png",
+      dark: "/assets/images/education_digital-house_dark.jpg",
+      light: "/assets/images/education_digital-house_light.jpg",
     },
   },
   {
@@ -99,8 +99,8 @@ export const education = [
     date: "2022",
     description: "Short description",
     image: {
-      dark: "/assets/education_digital-house_white.png",
-      light: "/assets/education_digital-house_black.png",
+      dark: "/assets/images/education_digital-house_dark.jpg",
+      light: "/assets/images/education_digital-house_light.jpg",
     },
   },
   {
@@ -109,8 +109,8 @@ export const education = [
     date: "2022",
     description: "Short description",
     image: {
-      dark: "/assets/education_digital-house_white.png",
-      light: "/assets/education_digital-house_black.png",
+      dark: "/assets/images/education_digital-house_dark.jpg",
+      light: "/assets/images/education_digital-house_light.jpg",
     },
   },
   {
@@ -119,8 +119,8 @@ export const education = [
     date: "2022",
     description: "Short description",
     image: {
-      dark: "/assets/education_digital-house_white.png",
-      light: "/assets/education_digital-house_black.png",
+      dark: "/assets/images/education_digital-house_dark.jpg",
+      light: "/assets/images/education_digital-house_light.jpg",
     },
   },
   {
@@ -129,8 +129,8 @@ export const education = [
     date: "2021-2022",
     description: "Short description",
     image: {
-      dark: "/assets/education_digital-house_white.png",
-      light: "/assets/education_digital-house_black.png",
+      dark: "/assets/images/education_digital-house_dark.jpg",
+      light: "/assets/images/education_digital-house_light.jpg",
     },
   },
   {
@@ -139,8 +139,8 @@ export const education = [
     date: "2020-2021",
     description: "Short description",
     image: {
-      dark: "/assets/education_coderhouse_white.png",
-      light: "/assets/education_coderhouse_black.png",
+      dark: "/assets/images/education_coderhouse_dark.jpg",
+      light: "/assets/images/education_coderhouse_light.jpg",
     },
   },
 ];
@@ -151,28 +151,40 @@ export const certifications = [
     title: "Frontend Development",
     company: "Meta",
     date: "2022",
-    image: "/assets/certification_meta.png",
+    image: {
+      dark: "/assets/images/certification_meta_dark.jpg",
+      light: "/assets/images/certification_meta_light.jpg",
+    },
   },
   {
     id: "7UG TZU 4GN",
     title: "Cloud Computing",
     company: "Google",
     date: "2022",
-    image: "/assets/certification_google.png",
+    image: {
+      dark: "/assets/images/certification_google_dark.jpg",
+      light: "/assets/images/certification_google_light.jpg",
+    },
   },
   {
     id: "AAS 6BS RQ4",
     title: "Web Development II",
     company: "Google",
     date: "2022",
-    image: "/assets/certification_google.png",
+    image: {
+      dark: "/assets/images/certification_google_dark.jpg",
+      light: "/assets/images/certification_google_light.jpg",
+    },
   },
   {
     id: "F92 HGH WTT",
     title: "Web Development I",
     company: "Google",
     date: "2022",
-    image: "/assets/certification_google.png",
+    image: {
+      dark: "/assets/images/certification_google_dark.jpg",
+      light: "/assets/images/certification_google_light.jpg",
+    },
   },
 ];
 
@@ -180,7 +192,7 @@ export const projects = [
   {
     title: "E-commerce",
     description: "Short description",
-    image: "/assets/project_e-commerce.jpg",
+    image: "/assets/images/project_e-commerce.jpg",
     technologies: [
       "AWS",
       "MongoDB",
@@ -195,7 +207,7 @@ export const projects = [
   {
     title: "CMS",
     description: "Short description",
-    image: "/assets/project_cms.jpg",
+    image: "/assets/images/project_cms.jpg",
     technologies: ["Angular", "AWS", "Sass", "TypeScript"],
     repository: "https://github.com/seba-sanchis/cms",
     application: "https://cms.sebastiansanchis.com/",
@@ -203,7 +215,7 @@ export const projects = [
   {
     title: "Blog",
     description: "Short description",
-    image: "/assets/project_blog.jpg",
+    image: "/assets/images/project_blog.jpg",
     technologies: ["AWS", "GraphQL", "NextJS", "TailwindCSS"],
     repository: "https://github.com/seba-sanchis/e-commerce",
     application: "https://e-commerce.sebastiansanchis.com/",

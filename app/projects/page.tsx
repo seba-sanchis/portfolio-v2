@@ -9,7 +9,7 @@ export default function Page() {
       <div className="w-[696px]">
         <div className="flex justify-between p-6 rounded-lg bg-[--septenary-contrast]">
           <h1 className="text-4xl font-semibold">Projects</h1>
-          <Image src="/assets/code-solid.svg" alt="briefcase icon" width={40} height={40} />
+          <Image src="/assets/svg/code-solid.svg" alt="briefcase icon" width={40} height={40} />
         </div>
 
         <div>

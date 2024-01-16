@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { certifications } from "@/constants";
+import { ThemeImage } from "@/components";
 
 export default function Page() {
   return (
@@ -9,7 +10,7 @@ export default function Page() {
         <div className="flex justify-between p-6 rounded-lg bg-[--septenary-contrast]">
           <h1 className="text-4xl font-semibold">Certifications</h1>
           <Image
-            src="/assets/certificate-solid.svg"
+            src="/assets/svg/certificate-solid.svg"
             alt="briefcase icon"
             width={40}
             height={40}
@@ -20,8 +21,9 @@ export default function Page() {
           {certifications.map((item, i) => (
             <div key={i} className="flex gap-2 my-4">
               <div>
-                <Image
-                  src={item.image}
+                <ThemeImage
+                  srcLight={item.image.light}
+                  srcDark={item.image.dark}
                   alt={`${item.company} logo`}
                   width={56}
                   height={56}
