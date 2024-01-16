@@ -1,10 +1,8 @@
-import Image from "next/image";
-
-import { aboutMe } from "@/constants";
+import { about } from "@/constants";
 import { ThemeImage } from "@/components";
 
 export default function Home() {
-  const { description, photo, position } = aboutMe;
+  const { description, photo, position } = about;
 
   return (
     <section className="section">

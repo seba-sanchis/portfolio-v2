@@ -38,7 +38,7 @@ import {
 } from "react-icons/si";
 
 // Content
-export const aboutMe = {
+export const about = {
   position: "Frontend Developer",
   description:
     "Hey, I'm Sebastian Sanchis 👋, bringing over 3 years of experience in building responsive, user-friendly websites and applications. I specialize in delivering seamless user experiences through the latest technologies and clean, maintainable code.",
@@ -193,14 +193,7 @@ export const projects = [
     title: "E-commerce",
     description: "Short description",
     image: "/assets/images/project_e-commerce.jpg",
-    technologies: [
-      "AWS",
-      "MongoDB",
-      "NextJS",
-      "NodeJS",
-      "TailwindCSS",
-      "TypeScript",
-    ],
+    tags: ["AWS", "MongoDB", "NextJS", "NodeJS", "TailwindCSS", "TypeScript"],
     repository: "https://github.com/seba-sanchis/e-commerce",
     application: "https://e-commerce.sebastiansanchis.com/",
   },
@@ -208,7 +201,7 @@ export const projects = [
     title: "CMS",
     description: "Short description",
     image: "/assets/images/project_cms.jpg",
-    technologies: ["Angular", "AWS", "Sass", "TypeScript"],
+    tags: ["Angular", "AWS", "Sass", "TypeScript"],
     repository: "https://github.com/seba-sanchis/cms",
     application: "https://cms.sebastiansanchis.com/",
   },
@@ -216,7 +209,7 @@ export const projects = [
     title: "Blog",
     description: "Short description",
     image: "/assets/images/project_blog.jpg",
-    technologies: ["AWS", "GraphQL", "NextJS", "TailwindCSS"],
+    tags: ["AWS", "GraphQL", "NextJS", "TailwindCSS"],
     repository: "https://github.com/seba-sanchis/e-commerce",
     application: "https://e-commerce.sebastiansanchis.com/",
   },
@@ -257,7 +250,7 @@ export const skills = {
 
 // Navbar
 export const sections = [
-  { icon: FaUserCircle, name: "About me", url: "/" },
+  { icon: FaUserCircle, name: "About", url: "/" },
   { icon: FaBriefcase, name: "Experience", url: "/experience" },
   { icon: FaGraduationCap, name: "Education", url: "/education" },
   { icon: FaCertificate, name: "Certifications", url: "/certifications" },

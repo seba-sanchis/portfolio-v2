@@ -1,15 +1,53 @@
 "use client";
 
+import { useState } from "react";
+
 import { Button } from ".";
+import { sendEmail } from "@/lib/nodemailer";
+import { Contact } from "@/types";
 
 export default function Form() {
-  return (
-    <form className="flex flex-col gap-4 mt-4">
-      <input type="text" placeholder="Name" className="input h-12" />
-      <input type="text" placeholder="Email" className="input h-12" />
-      <textarea placeholder="Message" className="input h-80" />
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [contact, setContact] = useState<Contact>({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-      <Button />
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    await sendEmail(contact);
+
+    setIsSubmitting(false);
+    setContact({ name: "", email: "", message: "" });
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-4">
+      <input
+        type="text"
+        placeholder="Full name"
+        className="input h-12"
+        value={contact.name}
+        onChange={(e) => setContact({ ...contact, name: e.target.value })}
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        className="input h-12"
+        value={contact.email}
+        onChange={(e) => setContact({ ...contact, email: e.target.value })}
+      />
+      <textarea
+        placeholder="Message"
+        className="input h-80 resize-none"
+        value={contact.message}
+        onChange={(e) => setContact({ ...contact, message: e.target.value })}
+      />
+
+      <Button cta="Send message" isSubmitting={isSubmitting} />
     </form>
   );
 }
