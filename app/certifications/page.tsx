@@ -1,6 +1,6 @@
-import { certifications } from "@/constants";
 import Image from "next/image";
-import { FaCertificate } from "react-icons/fa";
+
+import { certifications } from "@/constants";
 
 export default function Page() {
   return (
@@ -8,18 +8,23 @@ export default function Page() {
       <div className="w-[696px]">
         <div className="flex justify-between p-6 rounded-lg bg-[--septenary-contrast]">
           <h1 className="text-4xl font-semibold">Certifications</h1>
-          <FaCertificate size={40} />
+          <Image
+            src="/assets/certificate-solid.svg"
+            alt="briefcase icon"
+            width={40}
+            height={40}
+          />
         </div>
 
-        <div className="mx-6">
+        <div>
           {certifications.map((item, i) => (
             <div key={i} className="flex gap-2 my-4">
               <div>
                 <Image
                   src={item.image}
                   alt={`${item.company} logo`}
-                  width={64}
-                  height={64}
+                  width={56}
+                  height={56}
                 />
               </div>
               <div className="w-full">
@@ -29,7 +34,7 @@ export default function Page() {
                   </h2>
                   <span>{item.date}</span>
                 </div>
-                <p>{item.description}</p>
+                <span>{item.id}</span>
               </div>
             </div>
           ))}

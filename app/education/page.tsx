@@ -1,6 +1,7 @@
-import { education } from "@/constants";
 import Image from "next/image";
-import { FaGraduationCap } from "react-icons/fa";
+
+import { education } from "@/constants";
+import { ThemeImage } from "@/components";
 
 export default function Page() {
   return (
@@ -8,18 +9,24 @@ export default function Page() {
       <div className="w-[696px]">
         <div className="flex justify-between p-6 rounded-lg bg-[--septenary-contrast]">
           <h1 className="text-4xl font-semibold">Education</h1>
-          <FaGraduationCap size={40} />
+          <Image
+            src="/assets/graduation-cap-solid.svg"
+            alt="briefcase icon"
+            width={48}
+            height={48}
+          />
         </div>
 
-        <div className="mx-6">
+        <div>
           {education.map((item, i) => (
             <div key={i} className="flex gap-2 my-4">
               <div>
-                <Image
-                  src={item.image}
+                <ThemeImage
+                  srcLight={item.image.light}
+                  srcDark={item.image.dark}
                   alt={`${item.school} logo`}
-                  width={64}
-                  height={64}
+                  width={56}
+                  height={56}
                 />
               </div>
 

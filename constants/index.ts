@@ -42,7 +42,10 @@ export const aboutMe = {
   position: "Frontend Developer",
   description:
     "Hey, I'm Sebastian Sanchis 👋, bringing over 3 years of experience in building responsive, user-friendly websites and applications. I specialize in delivering seamless user experiences through the latest technologies and clean, maintainable code.",
-  photo: "/assets/about_me.png",
+  photo: {
+    dark: "/assets/about_me-black.jpg",
+    light: "/assets/about_me-white.jpg",
+  },
 };
 
 export const experience = {
@@ -65,56 +68,80 @@ export const education = [
     school: "Digital House",
     date: "2022",
     description: "Short description",
-    image: "/assets/education_digital-house.jpg",
+    image: {
+      dark: "/assets/education_digital-house_white.png",
+      light: "/assets/education_digital-house_black.png",
+    },
   },
   {
     title: "Software Design Patterns",
     school: "Digital House",
     date: "2022",
     description: "Short description",
-    image: "/assets/education_digital-house.jpg",
+    image: {
+      dark: "/assets/education_digital-house_white.png",
+      light: "/assets/education_digital-house_black.png",
+    },
   },
   {
     title: "Object-Oriented Programming (OOP)",
     school: "Digital House",
     date: "2022",
     description: "Short description",
-    image: "/assets/education_digital-house.jpg",
+    image: {
+      dark: "/assets/education_digital-house_white.png",
+      light: "/assets/education_digital-house_black.png",
+    },
   },
   {
     title: "Test-Driven Development (TDD)",
     school: "Digital House",
     date: "2022",
     description: "Short description",
-    image: "/assets/education_digital-house.jpg",
+    image: {
+      dark: "/assets/education_digital-house_white.png",
+      light: "/assets/education_digital-house_black.png",
+    },
   },
   {
     title: "Payment Gateway Integration",
     school: "Digital House",
     date: "2022",
     description: "Short description",
-    image: "/assets/education_digital-house.jpg",
+    image: {
+      dark: "/assets/education_digital-house_white.png",
+      light: "/assets/education_digital-house_black.png",
+    },
   },
   {
     title: "Amazon Web Services (AWS)",
     school: "Digital House",
     date: "2022",
     description: "Short description",
-    image: "/assets/education_digital-house.jpg",
+    image: {
+      dark: "/assets/education_digital-house_white.png",
+      light: "/assets/education_digital-house_black.png",
+    },
   },
   {
     title: "Full Stack Web Developer",
     school: "Digital House",
     date: "2021-2022",
     description: "Short description",
-    image: "/assets/education_digital-house.jpg",
+    image: {
+      dark: "/assets/education_digital-house_white.png",
+      light: "/assets/education_digital-house_black.png",
+    },
   },
   {
     title: "UI/UX Design",
     school: "Coderhouse",
     date: "2020-2021",
     description: "Short description",
-    image: "/assets/education_coderhouse.jpg",
+    image: {
+      dark: "/assets/education_coderhouse_white.png",
+      light: "/assets/education_coderhouse_black.png",
+    },
   },
 ];
 
@@ -124,32 +151,28 @@ export const certifications = [
     title: "Frontend Development",
     company: "Meta",
     date: "2022",
-    description: "Short description",
-    image: "/assets/certification_meta.jpg",
+    image: "/assets/certification_meta.png",
   },
   {
     id: "7UG TZU 4GN",
     title: "Cloud Computing",
     company: "Google",
     date: "2022",
-    description: "Short description",
-    image: "/assets/certification_google.jpg",
+    image: "/assets/certification_google.png",
   },
   {
     id: "AAS 6BS RQ4",
     title: "Web Development II",
     company: "Google",
     date: "2022",
-    description: "Short description",
-    image: "/assets/certification_google.jpg",
+    image: "/assets/certification_google.png",
   },
   {
     id: "F92 HGH WTT",
     title: "Web Development I",
     company: "Google",
     date: "2022",
-    description: "Short description",
-    image: "/assets/certification_google.jpg",
+    image: "/assets/certification_google.png",
   },
 ];
 

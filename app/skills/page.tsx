@@ -1,5 +1,5 @@
 import { skills } from "@/constants";
-import { FaTools } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Page() {
   const { backend, frontend, uiUx } = skills;
@@ -9,11 +9,11 @@ export default function Page() {
       <div className="w-[696px]">
         <div className="flex justify-between p-6 rounded-lg bg-[--septenary-contrast]">
           <h1 className="text-4xl font-semibold">Skills</h1>
-          <FaTools size={40} />
+          <Image src="/assets/screwdriver-wrench-solid.svg" alt="briefcase icon" width={40} height={40} />
         </div>
 
-        <div className="mx-2">
-          <h2 className="font-semibold mx-4 my-4">Frontend</h2>
+        <div>
+          <h2 className="font-semibold my-4">Frontend</h2>
           <ul className="flex gap-2 w-full flex-wrap">
             {frontend.map((item, i) => (
               <li
@@ -26,7 +26,7 @@ export default function Page() {
             ))}
           </ul>
 
-          <h2 className="font-semibold mx-4 my-4">Backend</h2>
+          <h2 className="font-semibold my-4">Backend</h2>
           <ul className="flex gap-2 w-full flex-wrap">
             {backend.map((item, i) => (
               <li
@@ -39,7 +39,7 @@ export default function Page() {
             ))}
           </ul>
 
-          <h2 className="font-semibold mx-4 my-4">UI/UX</h2>
+          <h2 className="font-semibold my-4">UI/UX</h2>
           <ul className="flex gap-2 w-full flex-wrap">
             {uiUx.map((item, i) => (
               <li
