@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <section className="section">
       <div className="flex items-center animate-show">
-        <div className="pr-8 max-w-[640px]">
+        <div className="max-w-[640px]">
           <h1 className="w-fit text-4xl font-semibold text-transparent animate-spin-gradient bg-clip-text bg-center bg-cover bg-red-to-pink-to-purple-horizontal-gradient">
             {position}
           </h1>

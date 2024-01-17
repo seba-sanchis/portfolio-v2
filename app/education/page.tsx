@@ -37,7 +37,9 @@ export default function Page() {
                   </h2>
                   <span>{item.date}</span>
                 </div>
-                <p>{item.description}</p>
+                <p className="text-sm text-[--quaternary-contrast] max-w-md">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}

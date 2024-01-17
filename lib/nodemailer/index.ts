@@ -1,7 +1,8 @@
 "use server";
 
-import { Contact } from "@/types";
 import nodemailer from "nodemailer";
+
+import { Contact } from "@/types";
 
 const { NODEMAILER_EMAIL, NODEMAILER_PASSWORD } = process.env;
 

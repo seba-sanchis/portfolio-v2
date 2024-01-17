@@ -36,7 +36,9 @@ export default function Page() {
                   </h2>
                   <span>{item.date}</span>
                 </div>
-                <span>{item.id}</span>
+                <p className="text-sm text-[--quaternary-contrast]">
+                  {item.id}
+                </p>
               </div>
             </div>
           ))}

@@ -89,7 +89,7 @@ body {
 }
 
 .input {
-  @apply p-2 outline-none rounded border border-[--tertiary-contrast] text-[--tertiary-contrast] bg-[--page-background];
+  @apply p-2 outline-none rounded border border-[--senary-contrast] text-[--tertiary-contrast] bg-[--page-background] focus:border-[--french-violet] transition-colors duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)];
 }
 
 .pill {

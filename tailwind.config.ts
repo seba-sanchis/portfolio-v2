@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       animation: {
         "spin-gradient": "spinner 4s linear infinite forwards",
-        show: "displayer 1s linear forwards",
+        show: "displayer 500ms linear forwards",
       },
       backgroundImage: {
         "red-to-pink-to-purple-horizontal-gradient":

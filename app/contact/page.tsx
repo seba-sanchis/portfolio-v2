@@ -8,7 +8,12 @@ export default function Page() {
       <div className="w-[696px]">
         <div className="flex justify-between p-6 rounded-lg bg-[--septenary-contrast]">
           <h1 className="text-4xl font-semibold">Contact</h1>
-          <Image src="/assets/svg/envelope-solid.svg" alt="briefcase icon" width={40} height={40} />
+          <Image
+            src="/assets/svg/envelope-solid.svg"
+            alt="briefcase icon"
+            width={40}
+            height={40}
+          />
         </div>
 
         <Form />

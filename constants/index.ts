@@ -67,7 +67,7 @@ export const education = [
     title: "SOLID",
     school: "Digital House",
     date: "2022",
-    description: "Short description",
+    description: "SRP · OCP · LSP · ISP · DI",
     image: {
       dark: "/assets/images/education_digital-house_dark.jpg",
       light: "/assets/images/education_digital-house_light.jpg",
@@ -77,7 +77,7 @@ export const education = [
     title: "Software Design Patterns",
     school: "Digital House",
     date: "2022",
-    description: "Short description",
+    description: "Creational · Structural · Behavioral",
     image: {
       dark: "/assets/images/education_digital-house_dark.jpg",
       light: "/assets/images/education_digital-house_light.jpg",
@@ -87,7 +87,7 @@ export const education = [
     title: "Object-Oriented Programming (OOP)",
     school: "Digital House",
     date: "2022",
-    description: "Short description",
+    description: "Encapsulation · Inheritance · Polymorphism · Abstraction",
     image: {
       dark: "/assets/images/education_digital-house_dark.jpg",
       light: "/assets/images/education_digital-house_light.jpg",
@@ -97,7 +97,7 @@ export const education = [
     title: "Test-Driven Development (TDD)",
     school: "Digital House",
     date: "2022",
-    description: "Short description",
+    description: "Automated testing · Jest",
     image: {
       dark: "/assets/images/education_digital-house_dark.jpg",
       light: "/assets/images/education_digital-house_light.jpg",
@@ -107,7 +107,7 @@ export const education = [
     title: "Payment Gateway Integration",
     school: "Digital House",
     date: "2022",
-    description: "Short description",
+    description: "Mercado Pago · Checkout Pro",
     image: {
       dark: "/assets/images/education_digital-house_dark.jpg",
       light: "/assets/images/education_digital-house_light.jpg",
@@ -117,7 +117,7 @@ export const education = [
     title: "Amazon Web Services (AWS)",
     school: "Digital House",
     date: "2022",
-    description: "Short description",
+    description: "TCP · TCP/IP · HTTP · HTTPS · IAM · EC2 · RDS · S3",
     image: {
       dark: "/assets/images/education_digital-house_dark.jpg",
       light: "/assets/images/education_digital-house_light.jpg",
@@ -127,7 +127,8 @@ export const education = [
     title: "Full Stack Web Developer",
     school: "Digital House",
     date: "2021-2022",
-    description: "Short description",
+    description:
+      "HTML · JavaScript · NodeJS · JSON · Git · CI/CD · Scrum · Express · CSS · MVC · SQL · REST APIs · React",
     image: {
       dark: "/assets/images/education_digital-house_dark.jpg",
       light: "/assets/images/education_digital-house_light.jpg",
@@ -137,7 +138,8 @@ export const education = [
     title: "UI/UX Design",
     school: "Coderhouse",
     date: "2020-2021",
-    description: "Short description",
+    description:
+      "UX Research · MVP · Userflow · Wireframes · UX Metrics · Atomic Design · Usability Heuristics · UI Kits · Accessibility · Motion UI",
     image: {
       dark: "/assets/images/education_coderhouse_dark.jpg",
       light: "/assets/images/education_coderhouse_light.jpg",

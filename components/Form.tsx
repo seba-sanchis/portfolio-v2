@@ -29,6 +29,7 @@ export default function Form() {
       <input
         type="text"
         placeholder="Full name"
+        required
         className="input h-12"
         value={contact.name}
         onChange={(e) => setContact({ ...contact, name: e.target.value })}
@@ -36,12 +37,14 @@ export default function Form() {
       <input
         type="email"
         placeholder="Email"
+        required
         className="input h-12"
         value={contact.email}
         onChange={(e) => setContact({ ...contact, email: e.target.value })}
       />
       <textarea
         placeholder="Message"
+        required
         className="input h-80 resize-none"
         value={contact.message}
         onChange={(e) => setContact({ ...contact, message: e.target.value })}
