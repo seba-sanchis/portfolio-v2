@@ -19,8 +19,8 @@ export default function Page() {
         </div>
 
         <div>
-          <div className="flex justify-between my-4">
-            <h2 className="font-semibold">
+          <div className="flex justify-between font-semibold my-4">
+            <h2>
               {company} | {position}
             </h2>
             <span>{date}</span>

@@ -29,6 +29,7 @@
   --orange-red: oklch(63.32% 0.24 31.68);
   --subtle-purple: color-mix(in srgb, var(--bright-blue) 5%, #fff 10%);
 
+  --purple-to-blue-horizontal-gradient: linear-gradient(90deg, var(--electric-violet) 0%, var(--bright-blue) 100%);;
   --page-bg-radial-gradient: radial-gradient(circle, white 0%, white 100%);
   --soft-pink-radial-gradient: radial-gradient(
     circle at center bottom,
@@ -59,6 +60,7 @@
     --orange-red: oklch(63.32% 0.24 31.68);
     --subtle-purple: color-mix(in srgb, var(--bright-blue) 5%, #fff 10%);
 
+    --purple-to-blue-horizontal-gradient: linear-gradient(90deg, var(--electric-violet) 0%, var(--bright-blue) 100%);;
     --page-bg-radial-gradient: radial-gradient(circle, black 0%, black 100%);
     --soft-pink-radial-gradient: radial-gradient(
       circle at center bottom,
@@ -92,6 +94,6 @@ body {
   @apply p-2 outline-none rounded border border-[--senary-contrast] text-[--tertiary-contrast] bg-[--page-background] focus:border-[--french-violet] transition-colors duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)];
 }
 
-.pill {
+/* .pill {
   @apply [&:nth-child(6n+1)]:[--pill-accent:--hot-red] [&:nth-child(6n+2)]:[--pill-accent:--hot-pink] [&:nth-child(6n+3)]:[--pill-accent:--electric-violet] [&:nth-child(6n+4)]:[--pill-accent:--french-violet] [&:nth-child(6n+5)]:[--pill-accent:--indigo-blue] [&:nth-child(6n+6)]:[--pill-accent:--bright-blue];
-}
+} */

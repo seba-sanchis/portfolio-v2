@@ -7,19 +7,23 @@ export default function Home() {
   return (
     <section className="section">
       <div className="flex items-center animate-show">
-        <div className="max-w-[640px]">
+        <div className="max-w-lg">
           <h1 className="w-fit text-4xl font-semibold text-transparent animate-spin-gradient bg-clip-text bg-center bg-cover bg-red-to-pink-to-purple-horizontal-gradient">
             {position}
           </h1>
-          <p className="my-4 text-pretty">{description}</p>
+          {description.map((item, i) => (
+            <p key={i} className="my-4 text-pretty">
+              {item}
+            </p>
+          ))}
         </div>
         <div>
           <ThemeImage
             srcLight={photo.light}
             srcDark={photo.dark}
             alt="My personal photo"
-            width={640}
-            height={640}
+            width={512}
+            height={512}
           />
         </div>
       </div>

@@ -40,8 +40,10 @@ import {
 // Content
 export const about = {
   position: "Frontend Developer",
-  description:
-    "Hey, I'm Sebastian Sanchis 👋, bringing over 3 years of experience in building responsive, user-friendly websites and applications. I specialize in delivering seamless user experiences through the latest technologies and clean, maintainable code.",
+  description: [
+    "Hey, I'm Sebastian Sanchis 👋, bringing over 3 years of experience in building responsive, user-friendly websites and applications.",
+    "I specialize in providing seamless user experiences through NextJS, making clean and maintainable code.",
+  ],
   photo: {
     dark: "/assets/images/about_me_dark.jpg",
     light: "/assets/images/about_me_light.jpg",
@@ -191,27 +193,30 @@ export const certifications = [
 ];
 
 export const projects = [
-  {
-    title: "E-commerce",
-    description: "Short description",
-    image: "/assets/images/project_e-commerce.jpg",
-    tags: ["AWS", "MongoDB", "NextJS", "NodeJS", "TailwindCSS", "TypeScript"],
-    repository: "https://github.com/seba-sanchis/e-commerce",
-    application: "https://e-commerce.sebastiansanchis.com/",
-  },
+    // {
+  //   title: "Blog",
+  //   description:
+  //     "Content delivery with Hygraph, a powerful Headless CMS for sharing insightful articles and engaging stories.",
+  //   image: "/assets/images/project_blog.jpg",
+  //   tags: ["AWS", "GraphQL", "NextJS", "Tailwind CSS"],
+  //   repository: "https://github.com/seba-sanchis/blog",
+  //   application: "https://blog.sebastiansanchis.com/",
+  // },
   {
     title: "CMS",
-    description: "Short description",
+    description:
+      "Real-time synchronization with e-commerce. Intuitive interface to evaluate sales metrics and make decisions. The app allows to track completed orders and manage customer information, engagement content, categories, products and inventory.",
     image: "/assets/images/project_cms.jpg",
     tags: ["Angular", "AWS", "Sass", "TypeScript"],
     repository: "https://github.com/seba-sanchis/cms",
     application: "https://cms.sebastiansanchis.com/",
   },
   {
-    title: "Blog",
-    description: "Short description",
-    image: "/assets/images/project_blog.jpg",
-    tags: ["AWS", "GraphQL", "NextJS", "TailwindCSS"],
+    title: "E-commerce",
+    description:
+      "Integrated with NextAuth to ensure secure user authentication, the application is optimized for performance, accessibility, and SEO using best practices. Transactions are processed through Mercado Pago Checkout Pro, keeping track of all your purchases.",
+    image: "/assets/images/project_e-commerce.jpg",
+    tags: ["NextJS", "NodeJS", "Tailwind CSS", "TypeScript"],
     repository: "https://github.com/seba-sanchis/e-commerce",
     application: "https://e-commerce.sebastiansanchis.com/",
   },

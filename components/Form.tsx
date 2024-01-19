@@ -1,27 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 
 import { Button } from ".";
 import { sendEmail } from "@/lib/nodemailer";
 import { Contact } from "@/types";
 
 export default function Form() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const [contact, setContact] = useState<Contact>({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
-    await sendEmail(contact);
+    startTransition(async () => {
+      await sendEmail(contact);
 
-    setIsSubmitting(false);
-    setContact({ name: "", email: "", message: "" });
+      setContact({ name: "", email: "", message: "" });
+    });
   };
 
   return (
@@ -50,7 +50,7 @@ export default function Form() {
         onChange={(e) => setContact({ ...contact, message: e.target.value })}
       />
 
-      <Button cta="Send message" isSubmitting={isSubmitting} />
+      <Button cta="Send message" isPending={isPending} />
     </form>
   );
 }
