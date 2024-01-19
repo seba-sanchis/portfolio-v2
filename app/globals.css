@@ -29,7 +29,11 @@
   --orange-red: oklch(63.32% 0.24 31.68);
   --subtle-purple: color-mix(in srgb, var(--bright-blue) 5%, #fff 10%);
 
-  --purple-to-blue-horizontal-gradient: linear-gradient(90deg, var(--electric-violet) 0%, var(--bright-blue) 100%);;
+  --purple-to-blue-horizontal-gradient: linear-gradient(
+    90deg,
+    var(--electric-violet) 0%,
+    var(--bright-blue) 100%
+  );
   --page-bg-radial-gradient: radial-gradient(circle, white 0%, white 100%);
   --soft-pink-radial-gradient: radial-gradient(
     circle at center bottom,
@@ -60,7 +64,11 @@
     --orange-red: oklch(63.32% 0.24 31.68);
     --subtle-purple: color-mix(in srgb, var(--bright-blue) 5%, #fff 10%);
 
-    --purple-to-blue-horizontal-gradient: linear-gradient(90deg, var(--electric-violet) 0%, var(--bright-blue) 100%);;
+    --purple-to-blue-horizontal-gradient: linear-gradient(
+      90deg,
+      var(--electric-violet) 0%,
+      var(--bright-blue) 100%
+    );
     --page-bg-radial-gradient: radial-gradient(circle, black 0%, black 100%);
     --soft-pink-radial-gradient: radial-gradient(
       circle at center bottom,

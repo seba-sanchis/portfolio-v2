@@ -30,7 +30,7 @@ export default function Card({
           {tags.map((tag, i) => (
             <li key={i} className="flex items-center gap-1">
               {i > 0 && <span>·</span>}
-              {tag} 
+              {tag}
             </li>
           ))}
         </ul>

@@ -33,7 +33,7 @@ export default function Page() {
           ))}
         </div>
 
-        <div className="flex flex-col gap-4 mt-8 py-4 border-solid [border-image-slice:1] [border-image-width:1px_0] [border-image:var(--purple-to-blue-horizontal-gradient)]">
+        <div className="flex flex-col gap-4 mt-8 py-4 border-solid [border-block-width:1px] [border-image:var(--purple-to-blue-horizontal-gradient)1]">
           <div className="flex justify-between items-center font-semibold">
             <h3 className="text-transparent bg-clip-text [background-image:var(--purple-to-blue-horizontal-gradient)]">
               Github repositories
