@@ -19,7 +19,7 @@ export default function Page() {
         </div>
 
         <div>
-          <div className="flex justify-between font-semibold my-4">
+          <div className="flex flex-col lg:flex-row lg:justify-between font-semibold my-4">
             <h2>
               {company} | {position}
             </h2>

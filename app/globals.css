@@ -95,7 +95,7 @@ body {
 }
 
 .section {
-  @apply flex justify-center p-12;
+  @apply flex justify-center p-4 lg:p-12;
 }
 
 .input {

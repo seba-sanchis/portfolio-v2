@@ -20,11 +20,11 @@ export default function Page() {
 
         <div>
           <h2 className="font-semibold my-4">Frontend</h2>
-          <ul className="flex gap-2 w-full flex-wrap">
+          <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {frontend.map((item, i) => (
               <li
                 key={i}
-                className="flex gap-2 items-center p-4 w-[calc(25%-6px)] rounded text-pill-color bg-pill-background [--pill-accent:--hot-red]"
+                className="flex gap-2 items-center p-4 rounded text-pill-color bg-pill-background [--pill-accent:--hot-red]"
               >
                 <item.icon size={20} />
                 <span>{item.technology}</span>
@@ -33,11 +33,11 @@ export default function Page() {
           </ul>
 
           <h2 className="font-semibold my-4">Backend</h2>
-          <ul className="flex gap-2 w-full flex-wrap">
+          <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {backend.map((item, i) => (
               <li
                 key={i}
-                className="flex gap-2 items-center p-4 w-[calc(25%-6px)] rounded text-pill-color bg-pill-background [--pill-accent:--electric-violet]"
+                className="flex gap-2 items-center p-4 rounded text-pill-color bg-pill-background [--pill-accent:--electric-violet]"
               >
                 <item.icon size={20} />
                 <span>{item.technology}</span>
@@ -46,11 +46,11 @@ export default function Page() {
           </ul>
 
           <h2 className="font-semibold my-4">UI/UX</h2>
-          <ul className="flex gap-2 w-full flex-wrap">
+          <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {uiUx.map((item, i) => (
               <li
                 key={i}
-                className="flex gap-2 items-center p-4 w-[calc(25%-6px)] rounded text-pill-color bg-pill-background [--pill-accent:--bright-blue]"
+                className="flex gap-2 items-center p-4 rounded text-pill-color bg-pill-background [--pill-accent:--bright-blue]"
               >
                 <item.icon size={20} />
                 <span>{item.technology}</span>

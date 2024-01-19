@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`flex sticky top-0 py-4 px-[38px] lg:hidden w-screen lg:-translate-y-full transition-transform duration-300 ease-in bg-transparent-background border-b border-[--septenary-contrast] z-30 ${
+        className={`flex sticky top-0 p-4 lg:hidden w-screen lg:-translate-y-full transition-transform duration-300 ease-in bg-transparent-background border-b border-[--septenary-contrast] z-30 ${
           isOpen ? "-translate-y-full" : "translate-y-0"
         }`}
       >
@@ -22,8 +22,12 @@ export default function Navbar() {
           <FaBars size={20} />
         </button>
       </div>
+      <div
+        className="absolute top-0 right-0 bottom-0 left-0 z-10"
+        onClick={() => setIsOpen(false)}
+      ></div>
       <nav
-        className={`flex flex-col justify-between fixed top-0 left-0 bottom-0 py-4 border-e border-[--septenary-contrast] bg-[var(--page-background)] lg:bg-transparent-background lg:py-0 lg:translate-x-0 transition-transform duration-300 ease-in z-30 ${
+        className={`flex flex-col justify-between fixed top-0 left-0 bottom-0 py-4 border-e border-[--septenary-contrast] bg-[var(--page-background)] lg:bg-transparent-background lg:py-0 lg:translate-x-0 transition-transform duration-300 ease-in z-30 overflow-scroll ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <section className="section">
-      <div className="flex items-center animate-show">
+      <div className="flex flex-col lg:flex-row items-center animate-show">
         <div className="max-w-lg">
           <h1 className="w-fit text-4xl font-semibold text-transparent animate-spin-gradient bg-clip-text bg-center bg-cover bg-red-to-pink-to-purple-horizontal-gradient">
             {position}

@@ -25,15 +25,17 @@ export default function Page() {
                   srcLight={item.image.light}
                   srcDark={item.image.dark}
                   alt={`${item.school} logo`}
-                  width={56}
-                  height={56}
+                  width={48}
+                  height={48}
                 />
               </div>
 
               <div className="w-full">
-                <div className="flex justify-between">
-                  <h2 className="font-semibold">
-                    {item.title} | {item.school}
+                <div className="flex flex-col lg:flex-row lg:justify-between font-semibold">
+                  <h2 className="flex flex-col lg:flex-row">
+                    <span>{item.title}</span>{" "}
+                    <span className="hidden lg:inline-block">|</span>{" "}
+                    <span>{item.school}</span>
                   </h2>
                   <span>{item.date}</span>
                 </div>

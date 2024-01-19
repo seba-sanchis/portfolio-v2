@@ -25,13 +25,13 @@ export default function Page() {
                   srcLight={item.image.light}
                   srcDark={item.image.dark}
                   alt={`${item.company} logo`}
-                  width={56}
-                  height={56}
+                  width={48}
+                  height={48}
                 />
               </div>
               <div className="w-full">
-                <div className="flex justify-between">
-                  <h2 className="font-semibold">
+                <div className="flex justify-between font-semibold">
+                  <h2>
                     {item.title} | {item.company}
                   </h2>
                   <span>{item.date}</span>
