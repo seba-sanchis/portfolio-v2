@@ -1,9 +1,11 @@
 import Image from "next/image";
 
-import { certifications } from "@/constants";
 import { ThemeImage } from "@/components";
+import { getCertifications } from "@/lib/actions";
 
-export default function Page() {
+export default async function Page() {
+  const certifications = await getCertifications();
+
   return (
     <section className="section">
       <div className="w-[696px]">
@@ -22,8 +24,8 @@ export default function Page() {
             <div key={i} className="flex gap-2 my-4">
               <div>
                 <ThemeImage
-                  srcLight={item.image.light}
-                  srcDark={item.image.dark}
+                  lightImage={item.lightImage.url}
+                  darkImage={item.darkImage.url}
                   alt={`${item.company} logo`}
                   width={48}
                   height={48}
@@ -37,7 +39,7 @@ export default function Page() {
                   <span>{item.date}</span>
                 </div>
                 <p className="text-sm text-[--quaternary-contrast]">
-                  {item.id}
+                  {item.credential}
                 </p>
               </div>
             </div>

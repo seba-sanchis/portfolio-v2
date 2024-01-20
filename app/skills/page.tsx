@@ -1,9 +1,13 @@
 import Image from "next/image";
 
-import { skills } from "@/constants";
+import { getSkills } from "@/lib/actions";
 
-export default function Page() {
-  const { backend, frontend, uiUx } = skills;
+import { Icon } from "@/components";
+
+export default async function Page() {
+  const skills = await getSkills();
+
+  const { frontend, backend, uiUx } = skills;
 
   return (
     <section className="section">
@@ -26,8 +30,8 @@ export default function Page() {
                 key={i}
                 className="flex gap-2 items-center p-4 rounded text-pill-color bg-pill-background [--pill-accent:--hot-red]"
               >
-                <item.icon size={20} />
-                <span>{item.technology}</span>
+                <Icon name={item.title} size={20} />
+                <span>{item.title}</span>
               </li>
             ))}
           </ul>
@@ -39,8 +43,8 @@ export default function Page() {
                 key={i}
                 className="flex gap-2 items-center p-4 rounded text-pill-color bg-pill-background [--pill-accent:--electric-violet]"
               >
-                <item.icon size={20} />
-                <span>{item.technology}</span>
+                <Icon name={item.title} size={20} />
+                <span>{item.title}</span>
               </li>
             ))}
           </ul>
@@ -52,8 +56,8 @@ export default function Page() {
                 key={i}
                 className="flex gap-2 items-center p-4 rounded text-pill-color bg-pill-background [--pill-accent:--bright-blue]"
               >
-                <item.icon size={20} />
-                <span>{item.technology}</span>
+                <Icon name={item.title} size={20} />
+                <span>{item.title}</span>
               </li>
             ))}
           </ul>

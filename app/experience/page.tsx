@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import { experience } from "@/constants";
+import { getExperience } from "@/lib/actions";
 
-export default function Page() {
-  const { company, position, date, description } = experience;
+export default async function Page() {
+  const experience = await getExperience();
 
   return (
     <section className="section">
@@ -21,12 +21,12 @@ export default function Page() {
         <div>
           <div className="flex flex-col lg:flex-row lg:justify-between font-semibold my-4">
             <h2>
-              {company} | {position}
+              {experience.company} | {experience.position}
             </h2>
-            <span>{date}</span>
+            <span>{experience.date}</span>
           </div>
           <ul>
-            {description.map((item, i) => (
+            {experience.description.map((item, i) => (
               <li key={i}>{item}</li>
             ))}
           </ul>

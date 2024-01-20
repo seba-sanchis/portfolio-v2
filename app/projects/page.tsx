@@ -1,11 +1,13 @@
 import Image from "next/image";
-
-import { projects } from "@/constants";
-import { Card } from "@/components";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
 
-export default function Page() {
+import { FaGithub } from "react-icons/fa";
+import { Card } from "@/components";
+import { getProjects } from "@/lib/actions";
+
+export default async function Page() {
+  const projects = await getProjects();
+
   return (
     <section className="section">
       <div className="w-[696px]">
@@ -25,7 +27,7 @@ export default function Page() {
               key={i}
               title={project.title}
               description={project.description}
-              image={project.image}
+              image={project.image.url}
               tags={project.tags}
               repository={project.repository}
               application={project.application}
