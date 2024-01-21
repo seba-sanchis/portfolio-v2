@@ -6,18 +6,37 @@ import {
   Certification,
   Education,
   Experience,
+  Hero,
   Project,
   Skill,
 } from "@/types";
 
 const { HYGRAPH_ENDPOINT } = process.env;
 
+export async function getHero() {
+  const query = gql`
+    query Heroes {
+      heroes {
+        id
+        title
+        description
+        image {
+          url
+        }
+      }
+    }
+  `;
+
+  const result: Hero = await request(HYGRAPH_ENDPOINT!, query);
+
+  return result.heroes[0];
+}
+
 export async function getAbout() {
   const query = gql`
     query Abouts {
       abouts {
         id
-        title
         description
         lightImage {
           url

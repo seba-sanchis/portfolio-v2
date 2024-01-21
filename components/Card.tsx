@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Project } from "@/types";
+type Project = {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  application: string;
+};
 
 export default function Card({
   title,

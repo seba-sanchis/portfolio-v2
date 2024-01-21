@@ -17,6 +17,7 @@
   --quaternary-contrast: oklch(54.84% 0.023 304.99);
   --senary-contrast: oklch(91.75% 0.004 301.42);
   --septenary-contrast: oklch(97.12% 0.002 325.59);
+  --octonary-contrast: oklch(98.81% 0 0);
 
   --light-pink: color-mix(in srgb, var(--vivid-pink) 10%, white 80%);
   --bright-blue: oklch(51.01% 0.274 263.83);
@@ -45,6 +46,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --page-background: oklch(16.93% 0.004 285.95);
+    --test: oklch(25.16% 0.008 308.11);
 
     --full-contrast: #fff;
     --primary-contrast: oklch(98.81% 0 0);
@@ -52,6 +54,7 @@
     --quaternary-contrast: oklch(70.9% 0.015 304.04);
     --senary-contrast: oklch(36.98% 0.014 302.71);
     --septenary-contrast: oklch(25.16% 0.008 308.11);
+    --octonary-contrast: oklch(19.37% 0.006 300.98);
 
     --light-pink: color-mix(in srgb, var(--vivid-pink) 10%, white 80%);
     --bright-blue: oklch(51.01% 0.274 263.83);

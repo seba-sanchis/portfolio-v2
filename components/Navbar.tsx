@@ -6,10 +6,13 @@ import Link from "next/link";
 
 import { sections, socialMedia } from "@/constants";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Icon } from ".";
+import Image from "next/image";
 
 export default function Navbar() {
   const pathName = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <>
@@ -22,14 +25,8 @@ export default function Navbar() {
           <FaBars size={20} />
         </button>
       </div>
-      <div
-        className={`absolute top-0 right-0 bottom-0 left-0 z-10 ${
-          isOpen ? "block" : "hidden"
-        }`}
-        onClick={() => setIsOpen(false)}
-      ></div>
       <nav
-        className={`flex flex-col justify-between fixed top-0 left-0 bottom-0 py-4 border-e border-[--septenary-contrast] bg-[var(--page-background)] lg:bg-transparent-background lg:py-0 lg:translate-x-0 transition-transform duration-300 ease-in z-30 overflow-scroll ${
+        className={`flex flex-col justify-between fixed top-0 left-0 bottom-0 pt-4 pb-8 border-e border-[--septenary-contrast] bg-[var(--page-background)] lg:bg-transparent-background lg:py-0 lg:translate-x-0 transition-transform duration-300 ease-in z-30 overflow-scroll ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -40,6 +37,28 @@ export default function Navbar() {
           <FaTimes size={20} />
         </button>
         <ul onClick={() => setIsOpen(false)}>
+          <li
+            key="Hero"
+            className={`relative w-28 text-sm hover:text-[--primary-contrast] ${
+              pathName === "/"
+                ? "text-[--primary-contrast]"
+                : "text-[--quaternary-contrast]"
+            }`}
+          >
+            <span
+              className={`absolute top-0 bottom-0 left-0 w-0.5 bg-[--primary-contrast] ${
+                pathName === "/" ? "opacity-100" : "opacity-0"
+              }`}
+            ></span>
+            <Link href="/" className="flex flex-col items-center gap-3 py-5">
+              <Image
+                src="/assets/svg/ss-logo.svg"
+                alt="logo"
+                width={40}
+                height={40}
+              />
+            </Link>
+          </li>
           {sections.map((section) => (
             <li
               key={section.name}
@@ -58,30 +77,60 @@ export default function Navbar() {
                 href={section.url}
                 className="flex flex-col items-center gap-3 py-5"
               >
-                <section.icon size={16} />
+                <Icon name={section.name} size={16} />
                 <span>{section.name}</span>
               </Link>
             </li>
           ))}
         </ul>
-        <ul>
-          {socialMedia.map((social) => (
-            <li
-              key={social.name}
-              className="relative w-28 text-sm text-[--quaternary-contrast] hover:text-[--primary-contrast]"
-            >
-              <Link
-                href={social.url}
-                target="_blank"
-                className="flex flex-col items-center gap-3 py-5"
-              >
-                <social.icon size={16} />
-                <span>{social.name}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+
+        <button
+          className="relative w-28 text-sm text-[--quaternary-contrast] hover:text-[--primary-contrast]"
+          onClick={() => setIsActive(true)}
+        >
+          <span
+            className={`absolute top-0 bottom-0 left-0 w-0.5 bg-[--primary-contrast] ${
+              isActive ? "opacity-100" : "opacity-0"
+            }`}
+          ></span>
+          <div className="flex flex-col items-center gap-3 py-5">
+            <Icon name="More" size={16} />
+          </div>
+        </button>
       </nav>
+
+      <ul
+        className={`flex-col absolute bottom-[16px] left-[110px] z-30 text-[--primary-contrast] bg-[--page-background] border border-[--senary-contrast] rounded shadow-[10px_4px_40px_#00000013] ${
+          isActive ? "flex" : "hidden"
+        }`}
+      >
+        {socialMedia.map((social) => (
+          <li
+            key={social.name}
+            className="block relative w-20 text-sm text-[--quaternary-contrast] hover:text-[--primary-contrast] hover:bg-[--senary-contrast]"
+          >
+            <Link
+              href={social.url}
+              target="_blank"
+              className="flex flex-col items-center gap-3 py-4"
+            >
+              <Icon name={social.name} size={20} />
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <div
+        className={`absolute top-0 right-0 bottom-0 left-0 z-10 ${
+          isOpen ? "block" : "hidden"
+        }`}
+        onClick={() => setIsOpen(false)}
+      ></div>
+      <div
+        className={`absolute top-0 right-0 bottom-0 left-0 z-10 ${
+          isActive ? "block" : "hidden"
+        }`}
+        onClick={() => setIsActive(false)}
+      ></div>
     </>
   );
 }

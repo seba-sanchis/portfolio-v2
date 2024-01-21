@@ -1,7 +1,16 @@
+export interface Hero {
+  heroes: [
+    {
+      title: string;
+      description: string[];
+      image: { url: string };
+    }
+  ];
+}
+
 export interface About {
   abouts: [
     {
-      title: string;
       description: string[];
       lightImage: { url: string };
       darkImage: { url: string };

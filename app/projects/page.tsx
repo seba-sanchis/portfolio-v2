@@ -29,7 +29,6 @@ export default async function Page() {
               description={project.description}
               image={project.image.url}
               tags={project.tags}
-              repository={project.repository}
               application={project.application}
             />
           ))}
