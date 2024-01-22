@@ -1,16 +1,38 @@
-export interface Hero {
-  heroes: [
+export interface About {
+  abouts: [
     {
-      title: string;
       description: string[];
-      image: { url: string };
+      lightImage: { url: string };
+      darkImage: { url: string };
     }
   ];
 }
 
-export interface About {
-  abouts: [
+export interface Certification {
+  certifications: [
     {
+      title: string;
+      company: string;
+      date: string;
+      credential: string;
+      lightImage: { url: string };
+      darkImage: { url: string };
+    }
+  ];
+}
+
+export interface Contact {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export interface Education {
+  educations: [
+    {
+      title: string;
+      school: string;
+      date: string;
       description: string[];
       lightImage: { url: string };
       darkImage: { url: string };
@@ -29,28 +51,12 @@ export interface Experience {
   ];
 }
 
-export interface Education {
-  educations: [
+export interface Hero {
+  heroes: [
     {
       title: string;
-      school: string;
-      date: string;
       description: string[];
-      lightImage: { url: string };
-      darkImage: { url: string };
-    }
-  ];
-}
-
-export interface Certification {
-  certifications: [
-    {
-      title: string;
-      company: string;
-      date: string;
-      credential: string;
-      lightImage: { url: string };
-      darkImage: { url: string };
+      image: { url: string };
     }
   ];
 }
@@ -77,8 +83,11 @@ export interface Skill {
   ];
 }
 
-export interface Contact {
-  name: string;
-  email: string;
-  message: string;
+export interface Social {
+  socials: [
+    {
+      name: string;
+      url: string;
+    }
+  ];
 }

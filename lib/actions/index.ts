@@ -9,28 +9,10 @@ import {
   Hero,
   Project,
   Skill,
+  Social,
 } from "@/types";
 
 const { HYGRAPH_ENDPOINT } = process.env;
-
-export async function getHero() {
-  const query = gql`
-    query Heroes {
-      heroes {
-        id
-        title
-        description
-        image {
-          url
-        }
-      }
-    }
-  `;
-
-  const result: Hero = await request(HYGRAPH_ENDPOINT!, query);
-
-  return result.heroes[0];
-}
 
 export async function getAbout() {
   const query = gql`
@@ -53,22 +35,28 @@ export async function getAbout() {
   return result.abouts[0];
 }
 
-export async function getExperience() {
+export async function getCertifications() {
   const query = gql`
-    query Experiences {
-      experiences {
+    query Certifications {
+      certifications {
         id
+        title
         company
-        position
         date
-        description
+        credential
+        lightImage {
+          url
+        }
+        darkImage {
+          url
+        }
       }
     }
   `;
 
-  const result: Experience = await request(HYGRAPH_ENDPOINT!, query);
+  const result: Certification = await request(HYGRAPH_ENDPOINT!, query);
 
-  return result.experiences[0];
+  return result.certifications;
 }
 
 export async function getEducations() {
@@ -95,28 +83,41 @@ export async function getEducations() {
   return result.educations;
 }
 
-export async function getCertifications() {
+export async function getExperience() {
   const query = gql`
-    query Certifications {
-      certifications {
+    query Experiences {
+      experiences {
+        id
+        company
+        position
+        date
+        description
+      }
+    }
+  `;
+
+  const result: Experience = await request(HYGRAPH_ENDPOINT!, query);
+
+  return result.experiences[0];
+}
+
+export async function getHero() {
+  const query = gql`
+    query Heroes {
+      heroes {
         id
         title
-        company
-        date
-        credential
-        lightImage {
-          url
-        }
-        darkImage {
+        description
+        image {
           url
         }
       }
     }
   `;
 
-  const result: Certification = await request(HYGRAPH_ENDPOINT!, query);
+  const result: Hero = await request(HYGRAPH_ENDPOINT!, query);
 
-  return result.certifications;
+  return result.heroes[0];
 }
 
 export async function getProjects() {
@@ -159,4 +160,20 @@ export async function getSkills() {
   const uiUx = result.skills.filter((item) => item.category === "uiUx");
 
   return { frontend, backend, uiUx };
+}
+
+export async function getSocial() {
+  const query = gql`
+    query Socials {
+      socials {
+        id
+        name
+        url
+      }
+    }
+  `;
+
+  const result: Social = await request(HYGRAPH_ENDPOINT!, query);
+
+  return result.socials;
 }

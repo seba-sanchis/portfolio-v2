@@ -4,12 +4,16 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-import { sections, socialMedia } from "@/constants";
+import { sections } from "@/constants";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Icon } from ".";
-import Image from "next/image";
+import { Icon, ThemeImage } from ".";
 
-export default function Navbar() {
+type Social = {
+  name: string;
+  url: string;
+};
+
+export default function Navbar({ social }: { social: Social[] }) {
   const pathName = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
@@ -51,9 +55,10 @@ export default function Navbar() {
               }`}
             ></span>
             <Link href="/" className="flex flex-col items-center gap-3 py-5">
-              <Image
-                src="/assets/svg/ss-logo.svg"
-                alt="logo"
+              <ThemeImage
+                lightImage="/assets/ss-logo-light.svg"
+                darkImage="/assets/ss-logo-dark.svg"
+                alt="ss logo"
                 width={40}
                 height={40}
               />
@@ -104,17 +109,17 @@ export default function Navbar() {
           isActive ? "flex" : "hidden"
         }`}
       >
-        {socialMedia.map((social) => (
+        {social.map((item) => (
           <li
-            key={social.name}
+            key={item.name}
             className="block relative w-20 text-sm text-[--quaternary-contrast] hover:text-[--primary-contrast] hover:bg-[--senary-contrast]"
           >
             <Link
-              href={social.url}
+              href={item.url}
               target="_blank"
               className="flex flex-col items-center gap-3 py-4"
             >
-              <Icon name={social.name} size={20} />
+              <Icon name={item.name} size={20} />
             </Link>
           </li>
         ))}
