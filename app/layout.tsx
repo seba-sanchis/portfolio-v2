@@ -6,11 +6,14 @@ import { getSocial } from "@/lib/actions";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Sebastians Sanchis",
+  title: "Sebastian Sanchis",
   description:
-    "Sebastians Sanchis is a software developer who builds accessible, inclusive products and digital experiences for the web.",
+    "Sebastian Sanchis is a software developer who builds accessible, inclusive products and digital experiences for the web.",
   metadataBase: new URL("https://www.sebastiansanchis.com"),
   openGraph: {
+    images: "/assets/images/app-thumbnail.png",
+  },
+  twitter: {
     images: "/assets/images/app-thumbnail.png",
   },
 };
