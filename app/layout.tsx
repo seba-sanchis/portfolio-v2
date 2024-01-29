@@ -9,11 +9,24 @@ export const metadata: Metadata = {
   title: "Sebastian Sanchis",
   description:
     "Sebastian Sanchis is a software developer who builds accessible, inclusive products and digital experiences for the web.",
-  metadataBase: new URL("https://www.sebastiansanchis.com"),
+  metadataBase: new URL("https://sebastiansanchis.com"),
   openGraph: {
+    title: "Sebastian Sanchis",
+    description:
+      "Sebastian Sanchis is a software developer who builds accessible, inclusive products and digital experiences for the web.",
+    url: "https://sebastiansanchis.com",
+    siteName: "Sebastian Sanchis",
     images: "/assets/images/app-thumbnail.png",
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
+    card: "summary_large_image",
+    title: "Sebastian Sanchis",
+    description:
+      "Sebastian Sanchis is a software developer who builds accessible, inclusive products and digital experiences for the web.",
+    site: "@SebaSanchis",
+    creator: "@SebaSanchis",
     images: "/assets/images/app-thumbnail.png",
   },
 };
