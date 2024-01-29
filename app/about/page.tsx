@@ -11,7 +11,7 @@ export default async function Page() {
         <div className="flex justify-between p-6 rounded-lg bg-[--septenary-contrast]">
           <h1 className="text-4xl font-semibold">About</h1>
           <Image
-            src="/assets/svg/circle-user.svg"
+            src="/assets/icons/circle-user.svg"
             alt=""
             width={40}
             height={40}

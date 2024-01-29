@@ -46,7 +46,6 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --page-background: oklch(16.93% 0.004 285.95);
-    --test: oklch(25.16% 0.008 308.11);
 
     --full-contrast: #fff;
     --primary-contrast: oklch(98.81% 0 0);

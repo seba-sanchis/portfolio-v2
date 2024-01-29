@@ -6,8 +6,13 @@ import { getSocial } from "@/lib/actions";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Portfolio: Sebastian Sanchis",
-  description: "Professional information",
+  title: "Sebastians Sanchis",
+  description:
+    "Sebastians Sanchis is a software developer who builds accessible, inclusive products and digital experiences for the web.",
+  metadataBase: new URL("https://www.sebastiansanchis.com"),
+  openGraph: {
+    images: "/assets/images/app-thumbnail.png",
+  },
 };
 
 export default async function RootLayout({

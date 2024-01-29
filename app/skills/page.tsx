@@ -15,7 +15,7 @@ export default async function Page() {
         <div className="flex justify-between p-6 rounded-lg bg-[--septenary-contrast]">
           <h1 className="text-4xl font-semibold">Skills</h1>
           <Image
-            src="/assets/svg/screwdriver-wrench.svg"
+            src="/assets/icons/screwdriver-wrench.svg"
             alt="briefcase icon"
             width={40}
             height={40}
