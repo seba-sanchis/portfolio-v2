@@ -29,7 +29,6 @@ import {
   FaBriefcase,
   FaCertificate,
   FaCode,
-  FaEllipsisH,
   FaEnvelope,
   FaFilePdf,
   FaGithub,
@@ -83,8 +82,6 @@ export default function Icon({ name, size }: { name: string; size: number }) {
       return <SiMongodb size={size} />;
     case "Mongoose":
       return <SiMongoose size={size} />;
-    case "More":
-      return <FaEllipsisH size={size} />;
     case "NextJS":
       return <SiNextdotjs size={size} />;
     case "NodeJS":

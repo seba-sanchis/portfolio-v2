@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components";
 import { getSocial } from "@/lib/actions";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Sebastian Sanchis",
@@ -46,6 +47,7 @@ export default async function RootLayout({
         <main className="flex-1 w-full">{children}</main>
 
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

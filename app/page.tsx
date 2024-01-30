@@ -25,6 +25,7 @@ export default async function Home() {
               alt="hero image"
               width={256}
               height={256}
+              priority={true}
             />
           </div>
         </div>

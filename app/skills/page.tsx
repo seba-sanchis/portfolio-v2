@@ -19,6 +19,7 @@ export default async function Page() {
             alt="briefcase icon"
             width={40}
             height={40}
+            priority={true}
           />
         </div>
 

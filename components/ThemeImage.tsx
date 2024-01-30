@@ -10,8 +10,8 @@ export default function ThemeImage(props: Props) {
 
   return (
     <>
-      <Image {...rest} src={lightImage} className="dark:hidden" />
-      <Image {...rest} src={darkImage} className="hidden dark:block" />
+      <Image {...rest} src={lightImage} className="dark:hidden" priority={true} />
+      <Image {...rest} src={darkImage} className="hidden dark:block" priority={true} />
     </>
   );
 }

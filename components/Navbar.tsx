@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 import { sections } from "@/constants";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaEllipsisH, FaTimes } from "react-icons/fa";
 import { Icon, ThemeImage } from ".";
 
 type Social = {
@@ -25,7 +25,11 @@ export default function Navbar({ social }: { social: Social[] }) {
           isOpen ? "-translate-y-full" : "translate-y-0"
         }`}
       >
-        <button className="p-2" onClick={() => setIsOpen(true)}>
+        <button
+          aria-label="Menu"
+          className="p-2"
+          onClick={() => setIsOpen(true)}
+        >
           <FaBars size={20} />
         </button>
       </div>
@@ -35,6 +39,7 @@ export default function Navbar({ social }: { social: Social[] }) {
         }`}
       >
         <button
+          aria-label="Close"
           className="block self-center p-2 lg:hidden"
           onClick={() => setIsOpen(false)}
         >
@@ -90,6 +95,7 @@ export default function Navbar({ social }: { social: Social[] }) {
         </ul>
 
         <button
+          aria-label="Open social media links"
           className="relative w-28 text-sm text-[--quaternary-contrast] hover:text-[--primary-contrast]"
           onClick={() => setIsActive(true)}
         >
@@ -99,7 +105,7 @@ export default function Navbar({ social }: { social: Social[] }) {
             }`}
           ></span>
           <div className="flex flex-col items-center gap-3 py-5">
-            <Icon name="More" size={16} />
+            <FaEllipsisH size={16} />
           </div>
         </button>
       </nav>

@@ -23,7 +23,7 @@ export default function Card({
       className="group relative flex flex-col border border-[--senary-contrast] hover:bg-[--subtle-purple]"
     >
       <div className="h-48 overflow-hidden">
-        <Image src={image} alt={`${title} image`} width={696} height={192} />
+        <Image src={image} alt={`${title} image`} width={696} height={192} priority={true} />
       </div>
 
       <div className="flex flex-col p-4 gap-2 text-sm">
