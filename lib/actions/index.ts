@@ -1,6 +1,8 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { request, gql } from "graphql-request";
+
 import {
   About,
   Certification,
@@ -138,6 +140,8 @@ export async function getProjects() {
   `;
 
   const result: Project = await request(HYGRAPH_ENDPOINT!, query);
+
+  revalidatePath("/projects");
 
   return result.projects;
 }
