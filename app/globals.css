@@ -104,6 +104,15 @@ body {
   @apply p-2 outline-none rounded border border-[--senary-contrast] text-[--tertiary-contrast] bg-[--page-background] focus:border-[--french-violet] transition-colors duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)];
 }
 
-/* .pill {
+.pill {
   @apply [&:nth-child(6n+1)]:[--pill-accent:--hot-red] [&:nth-child(6n+2)]:[--pill-accent:--hot-pink] [&:nth-child(6n+3)]:[--pill-accent:--electric-violet] [&:nth-child(6n+4)]:[--pill-accent:--french-violet] [&:nth-child(6n+5)]:[--pill-accent:--indigo-blue] [&:nth-child(6n+6)]:[--pill-accent:--bright-blue];
-} */
+}
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
+}

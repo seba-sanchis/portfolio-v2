@@ -4,7 +4,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-import { sections } from "@/constants";
+import { SECTIONS } from "@/constants";
 import { FaBars, FaEllipsisH, FaTimes } from "react-icons/fa";
 import { Icon, ThemeImage } from ".";
 
@@ -34,7 +34,7 @@ export default function Navbar({ social }: { social: Social[] }) {
         </button>
       </div>
       <nav
-        className={`flex flex-col justify-between fixed top-0 left-0 bottom-0 pt-4 pb-8 border-e border-[--septenary-contrast] bg-[var(--page-background)] lg:bg-transparent-background lg:py-0 lg:translate-x-0 transition-transform duration-300 ease-in z-30 overflow-scroll ${
+        className={`flex flex-col justify-between fixed top-0 left-0 bottom-0 pt-4 pb-8 border-e border-[--septenary-contrast] bg-[var(--page-background)] lg:bg-transparent-background lg:py-0 lg:translate-x-0 transition-transform duration-300 ease-in z-30 overflow-scroll no-scrollbar ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -69,7 +69,7 @@ export default function Navbar({ social }: { social: Social[] }) {
               />
             </Link>
           </li>
-          {sections.map((section) => (
+          {SECTIONS.map((section) => (
             <li
               key={section.name}
               className={`relative w-28 text-sm hover:text-[--primary-contrast] ${

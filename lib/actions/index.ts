@@ -1,6 +1,5 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
 import { request, gql } from "graphql-request";
 
 import {
@@ -13,6 +12,7 @@ import {
   Skill,
   Social,
 } from "@/types";
+import { revalidatePath } from "next/cache";
 
 const { HYGRAPH_ENDPOINT } = process.env;
 
@@ -88,7 +88,7 @@ export async function getEducations() {
 export async function getExperience() {
   const query = gql`
     query Experiences {
-      experiences {
+      experiences(orderBy: date_ASC) {
         id
         company
         position
@@ -100,7 +100,7 @@ export async function getExperience() {
 
   const result: Experience = await request(HYGRAPH_ENDPOINT!, query);
 
-  return result.experiences[0];
+  return result.experiences;
 }
 
 export async function getHero() {
@@ -140,8 +140,6 @@ export async function getProjects() {
   `;
 
   const result: Project = await request(HYGRAPH_ENDPOINT!, query);
-
-  revalidatePath("/projects");
 
   return result.projects;
 }

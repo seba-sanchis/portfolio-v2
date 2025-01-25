@@ -19,19 +19,21 @@ export default async function Page() {
           />
         </div>
 
-        <div>
-          <div className="flex flex-col lg:flex-row lg:justify-between font-semibold my-4">
-            <h2>
-              {experience.company} | {experience.position}
-            </h2>
-            <span>{experience.date}</span>
+        {experience.map((experience, index) => (
+          <div key={index}>
+            <div className="flex flex-col lg:flex-row lg:justify-between font-semibold my-4">
+              <h2>
+                {experience.company} | {experience.position}
+              </h2>
+              <span>{experience.date}</span>
+            </div>
+            <ul>
+              {experience.description.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
           </div>
-          <ul>
-            {experience.description.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        </div>
+        ))}
       </div>
     </section>
   );

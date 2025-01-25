@@ -1,5 +1,5 @@
 // Navbar
-export const sections = [
+export const SECTIONS = [
   { name: "About", url: "/about" },
   { name: "Experience", url: "/experience" },
   { name: "Education", url: "/education" },

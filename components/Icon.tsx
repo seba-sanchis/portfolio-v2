@@ -1,6 +1,6 @@
 import {
   SiAdobexd,
-  SiAmazonaws,
+  SiAmazon,
   SiAngular,
   SiCss3,
   SiExpress,
@@ -45,7 +45,7 @@ export default function Icon({ name, size }: { name: string; size: number }) {
     case "Adobe XD":
       return <SiAdobexd size={size} />;
     case "AWS":
-      return <SiAmazonaws size={size} />;
+      return <SiAmazon size={size} />;
     case "Angular":
       return <SiAngular size={size} />;
     case "Certifications":
@@ -90,7 +90,7 @@ export default function Icon({ name, size }: { name: string; size: number }) {
       return <SiPostgresql size={size} />;
     case "Projects":
       return <FaCode size={size} />;
-    case "React":
+    case "React Native":
       return <SiReact size={size} />;
     case "Redux":
       return <SiRedux size={size} />;
