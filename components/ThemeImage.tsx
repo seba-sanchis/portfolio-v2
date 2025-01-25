@@ -6,12 +6,12 @@ type Props = Omit<ImageProps, "src" | "priority" | "loading"> & {
 };
 
 export default function ThemeImage(props: Props) {
-  const { lightImage, darkImage, ...rest } = props;
+  const { lightImage, darkImage, alt, ...rest } = props;
 
   return (
     <>
-      <Image {...rest} src={lightImage} className="dark:hidden" priority={true} />
-      <Image {...rest} src={darkImage} className="hidden dark:block" priority={true} />
+      <Image {...rest} src={lightImage} alt={alt} className="dark:hidden" priority={true} />
+      <Image {...rest} src={darkImage} alt={alt} className="hidden dark:block" priority={true} />
     </>
   );
 }

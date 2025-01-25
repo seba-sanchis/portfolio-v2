@@ -26,7 +26,9 @@ export async function sendEmail(formData: Contact) {
     };
 
     await transporter.sendMail(mailOptions);
-  } catch (error: any) {
-    throw new Error(`Failed to submit contact form: ${error.message}`);
+  } catch (error) {
+    if (error instanceof Error) {
+      throw new Error(`Failed to submit contact form: ${error.message}`);
+    }
   }
 }

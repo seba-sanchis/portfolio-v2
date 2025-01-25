@@ -12,7 +12,6 @@ import {
   Skill,
   Social,
 } from "@/types";
-import { revalidatePath } from "next/cache";
 
 const { HYGRAPH_ENDPOINT } = process.env;
 
